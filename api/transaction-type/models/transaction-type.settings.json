@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transaction_types",
+  "info": {
+    "name": "Transacciones Tipo"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "sign": {
+      "type": "string"
+    },
+    "status": {
+      "type": "boolean"
+    }
+  }
+}

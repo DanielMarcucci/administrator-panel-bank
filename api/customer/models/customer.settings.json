@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customers",
+  "info": {
+    "name": "Cliente",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "first_name": {
+      "type": "string"
+    },
+    "second_name": {
+      "type": "string"
+    },
+    "third_name": {
+      "type": "string"
+    },
+    "first_surname": {
+      "type": "string"
+    },
+    "second_surname": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "address": {
+      "type": "text"
+    },
+    "birth_date": {
+      "type": "date"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "zip_code": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "biginteger"
+    },
+    "status": {
+      "type": "boolean"
+    },
+    "users_id": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

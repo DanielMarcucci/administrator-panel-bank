@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "account_types",
+  "info": {
+    "name": "Cuentas Tipo",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "status": {
+      "type": "boolean"
+    },
+    "image_url": {
+      "type": "richtext"
+    }
+  }
+}

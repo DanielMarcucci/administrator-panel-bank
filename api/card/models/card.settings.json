@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cards",
+  "info": {
+    "name": "Tarjeta"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "card_type_id": {
+      "model": "card-type"
+    },
+    "name": {
+      "type": "string"
+    },
+    "authorized_amount": {
+      "type": "float"
+    },
+    "auth_exp_date": {
+      "type": "date"
+    },
+    "card_number": {
+      "type": "biginteger"
+    },
+    "card_security_code": {
+      "type": "integer"
+    },
+    "status": {
+      "type": "boolean"
+    }
+  }
+}

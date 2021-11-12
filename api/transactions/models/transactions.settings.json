@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transactions",
+  "info": {
+    "name": "Transaccione",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "account_id": {
+      "model": "account"
+    },
+    "currency_id": {
+      "model": "currency"
+    },
+    "transaction_type_id": {
+      "model": "transaction-type"
+    },
+    "related_account_id": {
+      "model": "account"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "amount": {
+      "type": "float"
+    },
+    "comments": {
+      "type": "text"
+    },
+    "authorization_code": {
+      "type": "biginteger"
+    },
+    "pin_verified": {
+      "type": "biginteger"
+    },
+    "status": {
+      "type": "boolean"
+    }
+  }
+}

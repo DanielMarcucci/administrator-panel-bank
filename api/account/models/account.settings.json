@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "accounts",
+  "info": {
+    "name": "Cuenta",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "account_type_id": {
+      "model": "account-type"
+    },
+    "bank_id": {
+      "model": "bank"
+    },
+    "currency_id": {
+      "model": "currency"
+    },
+    "customer_id": {
+      "model": "customer"
+    },
+    "account_number": {
+      "type": "biginteger"
+    },
+    "interest_savings_rate": {
+      "type": "float"
+    },
+    "current_balance": {
+      "type": "float"
+    },
+    "alias": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "status": {
+      "type": "boolean"
+    },
+    "card_id": {
+      "collection": "card",
+      "model": "card"
+    }
+  }
+}

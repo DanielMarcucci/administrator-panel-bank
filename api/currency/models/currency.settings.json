@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "currencies",
+  "info": {
+    "name": "Divisa"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "symbol": {
+      "type": "string"
+    },
+    "iso_code": {
+      "type": "string"
+    },
+    "status": {
+      "type": "boolean"
+    }
+  }
+}

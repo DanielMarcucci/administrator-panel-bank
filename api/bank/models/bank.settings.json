@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "banks",
+  "info": {
+    "name": "Banco"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "tradename": {
+      "type": "string"
+    },
+    "status": {
+      "type": "boolean"
+    }
+  }
+}
