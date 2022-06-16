@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: administrator-panel-bank-deployment
+  labels:
+    app: administrator-panel-bank
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: administrator-panel-bank
+  template:
+    metadata:
+      labels:
+        app: administrator-panel-bank
+    spec:
+      containers:
+      - name: administrator-panel-bank
+        image: gcr.io/massive-house-344607/administrator-panel-bank
+        ports:
+          - containerPort: 1337
+        env:
+          - name: DB_SCHEMA
+            value: postgres
+          - name: DB_USER
+            value: postgres
+          - name: DB_PASSWORD
+            value: "12345"
+          - name: DATABASE_HOST
+            value: 10.8.11.148
+          - name: DB_DATABASE
+            value: bank
+          - name: DB_PORT
+            value: "5432"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: administrator-panel-bank-service
+spec:
+  selector:
+    app: administrator-panel-bank
+  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    port: 1337
+    targetPort: 1337
+    nodePort: 30005
